@@ -20,7 +20,17 @@ public class TicketingSystem {
     //The counter used for numbering the tickets
     
     static Queue<Integer> queue = new LinkedList<>();
-    //The queue which stores the numbers of all of the tickets
+    /*The queue which stores the numbers of all of the tickets
+    
+    A queue was used as this code requires a first in, first out solution, which
+    is easy to implement with a queue as thats what it's designed for (see the
+    methods that a queue has)
+    
+    An ArrayDeque could be used as a queue also (likely to outperform a 
+    LinkedList as a queue), it would also allow you to work with both ends of
+    the queue, rather than just the front of it, however this isn't required
+    for this project.
+    */
     
     
     public static void main(String[] args) {
