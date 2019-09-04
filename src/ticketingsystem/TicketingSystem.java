@@ -17,20 +17,27 @@ import java.util.TimerTask;
 public class TicketingSystem {
     
     static int counter = 0;
+    //The counter used for numbering the tickets
+    
     static Queue<Integer> queue = new LinkedList<>();
+    //The queue which stores the numbers of all of the tickets
+    
     
     public static void main(String[] args) {
- 
+        
         Timer timer = new Timer();
         timer.schedule(new SalesAssisstantTask(), 0, 5000);
         //run code in the SalesAssistantTask run() method every 5 seconds
         
         timer.schedule(new CustomerTask(), 0, 3000);
         //run code in the CustomerTask run() method every 3 seconds
-
+        
     }
+    
+    
     public static class SalesAssisstantTask extends TimerTask { //inner class
        
+        
         public void run() {
                 
             System.out.println("\nSales Assistant is ready to"
@@ -68,8 +75,10 @@ public class TicketingSystem {
         }
     }
     
+    
     public static class CustomerTask extends TimerTask { //inner class
        
+        
         public void run() {
             counter++;
             //Add one to counter
